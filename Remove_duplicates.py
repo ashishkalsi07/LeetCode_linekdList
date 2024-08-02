@@ -1,15 +1,15 @@
 class ListNode(object):
     def __init__(self, val=0, next=None):
         self.val = val
-        self.next = next
+        self.next = None
 
 def deleteDuplicates(head):
-    current = head
-    while current and current.next:
-        if current.val == current.next.val:
-            current.next = current.next.next
+    cur=head
+    while cur and cur.next:
+        if cur.val == cur.next.val:
+            cur.next=cur.next.next
         else:
-            current = current.next
+            cur=cur.next
     return head
 
 def printlist(head):
